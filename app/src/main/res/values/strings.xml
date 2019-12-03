@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">VenteAPP</string>
+        <string name="item_default_name">Nom de l\'article</string>
+        <string name="item_default_price">0$</string>
+        <string name="description_image">TODO</string>
+        <string name="welcoming_text">Car Seller</string>
+        <string name="testez_nos_voitures">Testez nos voitures</string>
+        <string name="description">TO DO</string>
+        <string name="merci">Merci</string>
+        <string name="ma_description">ma description </string>
+        <string name="mon_text" />
+        <string name="text_test">text test</string>
+    <string name="bienvenue_dans_votre_boutique_en_ligne">Bienvenue dans votre boutique en ligne!</string>
+    <string name="image_base">image_base</string>
+</resources>
+
+
