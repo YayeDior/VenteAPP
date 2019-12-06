@@ -21,13 +21,16 @@ Premier écran
 
 Mon premier écran me sert d'ecran d'accueil.Je présente l'application avec une image et un bouton qui me permet de me rediriger sur le second écran.
 
-ecran d'acceuil
+
 <img width="240" alt="Capture ecran d'accueil" src="https://user-images.githubusercontent.com/46995540/70328876-60d59000-183a-11ea-842a-c0e305e59e89.PNG">
+
 
 Deuxième écran
 
+
 Mon deuxième écran affiche ma RecyclerView.Il s'agit ici d'une liste de téléphone, le type,la capacité et la couleur.
 J'ai ajouté des images à chaque item avec Picasso.
+
 
 <img width="240" alt="Capture ecran liste 1" src="https://user-images.githubusercontent.com/46995540/70328936-82367c00-183a-11ea-8876-65c706c0c8d8.PNG">
 
