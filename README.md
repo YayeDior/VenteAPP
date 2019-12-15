@@ -1,11 +1,11 @@
 # VenteAPP
 Présentation:
 
-Dans le cadre de ce projet,nous devons developper une application mobile en respectant les consignes demandées.J'ai developpé mon projet sur un site de vente de télephone.
+Dans le cadre de ce projet,nous devons developper une application mobile en respectant les consignes demandées.J'ai developpé mon projet sur un site de vente de télephone.J'ai crée un fichier JSON pour faire mon Api.
 
 Prérequis:
 
-Télécharger Android studio Création d'un compte Github
+Télécharger Android studio Création d'un compte Github.Utilisation d'un architecture MVC.
 
 Consignes respectées:
 
