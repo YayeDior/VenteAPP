@@ -1,4 +1,4 @@
-package com.example.venteapp;
+package com.example.venteapp.View;
 
 import com.example.venteapp.Model.Phone;
 
