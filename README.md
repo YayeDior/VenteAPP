@@ -39,8 +39,8 @@ Mon deuxième écran affiche ma RecyclerView.Il s'agit ici d'une liste de teleph
 
 Troisième écran
 
-Le troisième écran affiche le détail de chaque téléphone.
+Le troisième écran affiche le détail,la description de chaque téléphone.
 
 Conclusion
 
-Ce projet a été tres bénéfique pour moi dans la mesure ou il m'a permis de créer mon propre API.
+Ce projet a été tres bénéfique pour moi dans la mesure ou il m'a permis de créer mon propre API et de pouvoir structurer mon code avec l'architecture MVC.
