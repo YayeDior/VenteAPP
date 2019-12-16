@@ -1,7 +1,7 @@
 package com.example.venteapp;
 
 import android.content.Intent;
-//import android.media.MediaPlayer;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +11,7 @@ import com.example.venteapp.Controler.ListPhoneActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    //private MediaPlayer mediaPlayer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,5 @@ public class MainActivity extends AppCompatActivity {
     public void launchSecondActivity() {
         Intent intent = new Intent(this, ListPhoneActivity.class);
         startActivity(intent);
-        //mediaPlayer.start();
     }
 }
