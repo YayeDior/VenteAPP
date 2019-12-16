@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+
 import com.example.venteapp.R;
-import com.example.venteapp.View.ItemDetailsActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -22,8 +22,8 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
 
     //fields
     public Context context;
-    public List<PhoneItem> PhoneItemList;
-    public LayoutInflater inflater; //injecter chaque elt de la liste
+    public List<Phone> PhoneItemList;
+    public LayoutInflater inflater;
     Bundle bundle=new Bundle();
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -47,7 +47,7 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
         }
     }
 
-    public PhoneItem getItem(int position) {
+    public Phone getItem(int position) {
         return PhoneItemList.get(position);
     }
 
@@ -60,7 +60,7 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
         return PhoneItemList.size();
     }
 
-    public PhoneItemAdapter(Context context, List<PhoneItem> PhoneItemList){
+    public PhoneItemAdapter(Context context, List<Phone> PhoneItemList){
         this.PhoneItemList = PhoneItemList;
         this.context=context;
         this.inflater=LayoutInflater.from(context);
@@ -80,7 +80,7 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
         //get item informations
-        PhoneItem currentItem = getItem(position);
+        Phone currentItem = getItem(position);
         String tag =currentItem.getTag();
         final String itemStorage = currentItem.getStorage();
         final String itemName = currentItem.getName();
@@ -113,19 +113,8 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
 
         Picasso.with(context).load(currentItem.getImgUrl()).into(holder.itemIconView);
 
-        holder.itemNameView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, ItemDetailsActivity.class);
-                intent.putExtra("itemName",itemName);
-                intent.putExtra("itemStorage",itemStorage);
-                intent.putExtra("itemColor",itemColor);
-                bundle.putInt("image",resId);
-                intent.putExtras(bundle);
-                context.startActivity(intent);
-            }
-        });
+
+        };
 
     }
 
-}

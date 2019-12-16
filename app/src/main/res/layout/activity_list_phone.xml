@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/recycler_layout"
@@ -11,6 +11,9 @@
         android:paddingTop="@dimen/spacer_10"
 
         tools:context=".Controler.ListPhoneActivity">
+
+
+
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/shop_list"
@@ -30,7 +33,12 @@
             android:layout_marginBottom="9dp"
             android:background="@color/white"></android.support.v7.widget.RecyclerView>
 
-    </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
 
 
 

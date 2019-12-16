@@ -1,10 +1,27 @@
 <resources>
     <string name="app_name">VenteAPP</string>
+    <string-array name="Téléphone">
+
+        <item>
+            <item>Iphone_X</item>
+<item>Samsung</item>
+<item>Huawei</item>
+<item>Nokia</item>
+<item>Iphone_8</item>
+<item>Iphone_7</item>
+<item>Iphone_Xmax</item>
+<item>Samsung_S9</item>
+<item>Iphone_6</item>
+<item>Samsung_S1</item>
+
+
+        </item>
+    </string-array>
         <string name="item_default_name">Nom de l\'article</string>
+
         <string name="item_default_price">0$</string>
         <string name="description_image">TODO</string>
         <string name="welcoming_text">Car Seller</string>
-        <string name="testez_nos_voitures">Testez nos voitures</string>
         <string name="description">TO DO</string>
         <string name="merci">Merci</string>
         <string name="ma_description">ma description </string>
@@ -12,6 +29,7 @@
         <string name="text_test">text test</string>
     <string name="bienvenue_dans_votre_boutique_en_ligne">Bienvenue dans votre boutique en ligne!</string>
     <string name="image_base">image_base</string>
+    <string name="item_default_color">item_default_color</string>
 </resources>
 
 
