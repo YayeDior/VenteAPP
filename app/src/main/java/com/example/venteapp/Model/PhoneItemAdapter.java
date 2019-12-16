@@ -26,7 +26,14 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
     public LayoutInflater inflater;
     Bundle bundle=new Bundle();
 
+    public interface OnItemClickListener {
+        void onItemClick(Phone item);
+    }
+    private final OnItemClickListener listener;
+
     public class ViewHolder extends RecyclerView.ViewHolder {
+
+        public final View view;
 
         public TextView itemNameView;
         public TextView itemPriceView;
@@ -38,12 +45,22 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
 
         public ViewHolder(View v) {
             super(v);
+            view = v;
             layout = v.findViewById( R.id.shop_list);
             itemNameView = v.findViewById(R.id.item_name);
             itemPriceView = v.findViewById(R.id.item_price);
             itemIconView = v.findViewById(R.id.item_icon);
             itemStorageView = v.findViewById(R.id.item_storage);
             itemColorView = v.findViewById(R.id.item_color);
+        }
+
+        public void bind(final Phone item, final OnItemClickListener listener) {
+            view.setOnClickListener( new View.OnClickListener() {
+                @Override
+                public void onClick ( View v ) {
+                    listener.onItemClick( item );
+                }
+            } );
         }
     }
 
@@ -60,10 +77,11 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
         return PhoneItemList.size();
     }
 
-    public PhoneItemAdapter(Context context, List<Phone> PhoneItemList){
+    public PhoneItemAdapter(Context context, List<Phone> PhoneItemList, OnItemClickListener listener){
         this.PhoneItemList = PhoneItemList;
         this.context=context;
         this.inflater=LayoutInflater.from(context);
+        this.listener = listener;
     }
 
 
@@ -79,6 +97,7 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
+        holder.bind(PhoneItemList.get(position), listener);
         //get item informations
         Phone currentItem = getItem(position);
         String tag =currentItem.getTag();
@@ -112,6 +131,11 @@ public class PhoneItemAdapter extends RecyclerView.Adapter<PhoneItemAdapter.View
         holder.itemPriceView.setText(itemPrice+"£");
 
         Picasso.with(context).load(currentItem.getImgUrl()).into(holder.itemIconView);
+
+
+
+
+
 
 
         };

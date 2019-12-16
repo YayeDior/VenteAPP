@@ -60,11 +60,9 @@ public class ListPhoneActivity extends AppCompatActivity  {
 
                 Bundle bundle = null;
 
-                Context context = null;
 
 
-
-                showList(response.body(), null, null, resId );
+                showList(response.body(), null, resId );
 
             }
 
@@ -76,28 +74,25 @@ public class ListPhoneActivity extends AppCompatActivity  {
     }
 
     //get list view
-    private void showList ( final List <Phone> listToDisplay, final Context context, final Bundle bundle, final int resId ){
+    private void showList ( final List <Phone> listToDisplay, final Bundle bundle, final int resId ){
         shopListView = findViewById( R.id.shop_list );
         layoutManager = new LinearLayoutManager( this );
         shopListView.setLayoutManager( layoutManager );
-        mAdapter = new PhoneItemAdapter( this, listToDisplay );
-        shopListView.setAdapter( mAdapter );
-
-        shopListView.setOnClickListener( new View.OnClickListener() {
+        final Context context = this;
+        mAdapter = new PhoneItemAdapter( this, listToDisplay, new PhoneItemAdapter.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onItemClick ( Phone item ) {
                 Intent intent = new Intent(context, ItemDetailsPhone.class);
                 intent.putExtra("itemName",getName());
                 intent.putExtra("itemStorage",getStorage());
                 intent.putExtra("itemColor",Phone.getColor());
-                bundle.putInt("image",resId);
-                intent.putExtras(bundle);
+                //bundle.putInt("image",resId);
+                //intent.putExtras(bundle);
                 context.startActivity(intent);
+
             }
         } );
-
+        shopListView.setAdapter( mAdapter );
 
     }
-
-
 }
